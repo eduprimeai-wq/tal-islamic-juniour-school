@@ -3,47 +3,64 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TAL Islamic Junior School – Premium Experience</title>
+<title>TAL Islamic Junior School – Premium</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Poppins',sans-serif;background:#0b1f1a;color:#fff;scroll-behavior:smooth}
-section{padding:100px 20px}
-.nav{position:fixed;width:100%;top:0;background:rgba(0,0,0,0.8);backdrop-filter:blur(10px);display:flex;justify-content:space-between;align-items:center;padding:15px 30px;z-index:1000}
-.nav .logo{display:flex;align-items:center;gap:10px}
-.nav img{width:50px;height:50px;border-radius:50%}
-.nav a{color:#fff;margin:0 10px;text-decoration:none}
-.nav .menu-toggle{display:none;cursor:pointer;flex-direction:column;gap:5px}
-.nav .menu-toggle div{width:25px;height:3px;background:#fff}
+section{padding:90px 20px}
+
+/* NAV */
+.nav{position:fixed;width:100%;top:0;background:rgba(0,0,0,0.85);backdrop-filter:blur(12px);display:flex;justify-content:space-between;align-items:center;padding:15px 20px;z-index:1000}
+.logo{display:flex;align-items:center;gap:10px}
+.logo img{width:45px;height:45px;border-radius:50%}
 .nav-links{display:flex;gap:15px}
-@media(max-width:768px){.nav-links{display:none;flex-direction:column;background:rgba(0,0,0,0.9);position:absolute;top:70px;right:0;width:200px;padding:10px;border-radius:10px}.nav-links.show{display:flex}.nav .menu-toggle{display:flex}}
-.hero{height:100vh;background:url('https://i.ibb.co/8gD9CCdQ/images-29.jpg') center/cover fixed;display:flex;align-items:center;justify-content:center;text-align:center}
-.hero h1{font-size:3.5em;animation:glow 2s infinite alternate}
-@keyframes glow{from{text-shadow:0 0 10px #fff}to{text-shadow:0 0 30px #D4AF37}}
-.typewriter{margin-top:10px;font-size:1.2em;border-right:2px solid #fff;white-space:nowrap;overflow:hidden;width:0;animation:typing 4s steps(40,end) forwards}
-@keyframes typing{to{width:100%}}
-.btn{margin:15px;padding:12px 30px;border:none;border-radius:30px;background:#064E3B;color:#fff;cursor:pointer;transition:0.3s}
-.btn:hover{background:#D4AF37;color:#000;transform:scale(1.1)}
-.split{display:flex;flex-wrap:wrap;align-items:center;margin:50px 0}
-.split img{width:100%;max-width:400px;border-radius:10px}
-.split .text{background:#fff;color:#000;padding:20px;border-radius:10px;max-width:500px;margin:10px;flex:1}
-@media(max-width:768px){.split{flex-direction:column}.split .text{margin:10px 0}} 
+.nav a{color:#fff;text-decoration:none;font-size:14px}
+
+.menu-toggle{display:none;flex-direction:column;cursor:pointer}
+.menu-toggle span{width:25px;height:3px;background:#fff;margin:4px 0}
+
+@media(max-width:768px){
+.nav-links{position:fixed;top:0;right:-100%;height:100vh;width:70%;background:#000;flex-direction:column;justify-content:center;align-items:center;transition:0.4s}
+.nav-links.show{right:0}
+.menu-toggle{display:flex}
+}
+
+/* HERO */
+.hero{height:100vh;background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('https://i.ibb.co/y7DSJy8/fe7e3329-d47e-471c-aa16-e4c36e41fb15.jpg') center/cover no-repeat;display:flex;align-items:center;justify-content:center;text-align:center}
+.hero h1{font-size:2.8em}
+.hero p{margin-top:10px;font-size:1.1em}
+
+/* SPLIT */
+.split{display:flex;flex-wrap:wrap;gap:20px;align-items:center;margin:50px 0}
+.split img{width:100%;max-width:350px;border-radius:10px}
+.text{background:#fff;color:#000;padding:20px;border-radius:10px;flex:1}
+
+@media(max-width:768px){.split{flex-direction:column}.hero h1{font-size:2em}}
+
+/* FEATURES */
+.features{display:flex;flex-wrap:wrap;justify-content:center;gap:20px}
+.feature{background:#111;padding:20px;border-radius:12px;width:250px;text-align:center}
+
+/* GALLERY */
 .gallery{display:flex;flex-wrap:wrap;justify-content:center}
-.gallery img{width:250px;margin:10px;border-radius:10px;transition:0.3s}
-.gallery img:hover{transform:scale(1.1)}
+.gallery img{width:220px;margin:8px;border-radius:10px}
+
+/* TESTIMONIAL */
 .testimonials{display:flex;flex-wrap:wrap;justify-content:center;gap:20px}
-.testimonial{background:#111;padding:20px;border-radius:15px;width:260px;box-shadow:0 0 10px #D4AF37}
+.testimonial{background:#111;padding:20px;border-radius:15px;width:250px}
 .stars{color:#FFD700}
-.form{background:#122c25;padding:30px;border-radius:15px;max-width:400px;margin:auto;display:flex;flex-direction:column;gap:10px}
-.form input{padding:10px;border:none;border-radius:8px;background:#fff}
-.form button{padding:12px;background:#D4AF37;border:none;border-radius:8px;cursor:pointer;transition:0.3s}
-.form button:hover{transform:scale(1.05)}
-.hidden{opacity:0;transform:translateY(50px);transition:1s}
-.show{opacity:1;transform:translateY(0)}
-.whatsapp{position:fixed;bottom:20px;right:20px;width:60px;z-index:100}
-.whatsapp img{width:100%;animation:bounce 2s infinite}
-@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-footer{background:#000;padding:20px;text-align:center}
+
+/* FORM */
+.form{background:#122c25;padding:25px;border-radius:15px;max-width:350px;margin:auto}
+.form input,.form button{width:100%;margin:8px 0;padding:10px;border:none;border-radius:8px}
+.form button{background:#D4AF37}
+
+/* WHATSAPP */
+.whatsapp{position:fixed;bottom:20px;right:20px;width:55px}
+.whatsapp img{width:100%}
+
+footer{text-align:center;padding:20px;background:#000}
 </style>
 </head>
 <body>
@@ -53,107 +70,113 @@ footer{background:#000;padding:20px;text-align:center}
 <img src="https://i.ibb.co/67prz888/images-30.jpg">
 <b>TAL School</b>
 </div>
+
 <div class="menu-toggle" onclick="toggleMenu()">
-<div></div><div></div><div></div>
+<span></span><span></span><span></span>
 </div>
-<div class="nav-links">
+
+<div class="nav-links" id="menu">
 <a href="#about">About</a>
+<a href="#features">Why Us</a>
 <a href="#gallery">Gallery</a>
 <a href="#admissions">Admissions</a>
-<a href="#contact">Contact</a>
-<a href="https://www.tiktok.com/@talschool" target="_blank">TikTok</a>
 </div>
 </div>
 
 <section class="hero">
 <div>
-<h1>Welcome to TAL Islamic Junior School</h1>
-<div class="typewriter">Education for Faith, Discipline and Excellence</div>
+<h1>TAL Islamic Junior School</h1>
+<p>Building Faith, Knowledge, and Future Leaders</p>
 </div>
 </section>
 
-<section id="about" class="hidden">
+<section id="about">
 <h2 style="text-align:center">About Our School</h2>
 <div class="split">
 <img src="https://i.ibb.co/3Q6jLsk/80952f12-ed57-4f2f-907b-862dc4376c4a.jpg">
 <div class="text">
-<h3>Our Vision & Mission</h3>
-<p>TAL Islamic Junior School provides a safe, inclusive, and inspiring environment for children to thrive academically, spiritually, and socially. We focus on nurturing students with strong Islamic values while encouraging creativity, leadership, and confidence. Every child is guided to reach their full potential and develop a lifelong love for learning. Our teachers are dedicated mentors who inspire curiosity, moral integrity, and excellence in all students.</p>
+<p>We provide high-quality Islamic and academic education in a safe environment. Our students grow with discipline, knowledge, and confidence. We focus on both character and academic success. Every child is supported to achieve their best. Our goal is to shape future leaders.</p>
 </div>
 </div>
 </section>
 
-<section class="hidden">
+<section id="features">
+<h2 style="text-align:center">Why Choose Us</h2>
+<div class="features">
+<div class="feature">Faith-Based Learning</div>
+<div class="feature">Strong Discipline</div>
+<div class="feature">Experienced Teachers</div>
+<div class="feature">Safe Environment</div>
+</div>
+</section>
+
+<section>
+<h2 style="text-align:center">Student Life</h2>
 <div class="split">
 <img src="https://i.ibb.co/y7DSJy8/fe7e3329-d47e-471c-aa16-e4c36e41fb15.jpg">
 <div class="text">
-<h3>Sports & Physical Growth</h3>
-<p>Students participate in a variety of sports that build teamwork, strength, and discipline. Physical education promotes health, confidence, and resilience. Competitions develop leadership skills and a spirit of fair play. Activities are designed to engage students physically and mentally. Every child experiences personal growth while having fun in a safe environment.</p>
+<p>Students enjoy sports, teamwork, and activities that build confidence. They learn discipline and cooperation. Every activity helps them grow mentally and physically. Our programs keep students active and engaged. Learning is balanced with fun.</p>
 </div>
 </div>
 </section>
 
-<section class="hidden">
+<section>
 <div class="split">
 <img src="https://i.ibb.co/vCrKsMyM/maxresdefault-1.jpg">
 <div class="text">
-<h3>Stage & Talent Development</h3>
-<p>Our students shine on stage through performances, debates, and cultural activities. We cultivate creativity, self-expression, and public speaking skills. Every child is encouraged to showcase their talents and build confidence. Stage events promote teamwork and leadership. Parents and the community witness the students’ achievements and growth.</p>
+<p>Our stage events help students express themselves. They gain confidence through public speaking and performances. Talent is discovered and developed. Students feel proud of their achievements. Parents celebrate their growth.</p>
 </div>
 </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section class="hidden">
+<section>
 <h2 style="text-align:center">What Parents Say</h2>
 <div class="testimonials">
-<div class="testimonial">
-<div class="stars">★★★★★</div>
-<p>"This school changed my child's life completely. Highly recommended."</p>
-</div>
-<div class="testimonial">
-<div class="stars">★★★★★</div>
-<p>"Excellent discipline and strong Islamic foundation."</p>
-</div>
-<div class="testimonial">
-<div class="stars">★★★★★</div>
-<p>"Very caring teachers and great results."</p>
-</div>
+<div class="testimonial"><div class="stars">★★★★★</div><p>Best school ever.</p></div>
+<div class="testimonial"><div class="stars">★★★★★</div><p>My child improved a lot.</p></div>
+<div class="testimonial"><div class="stars">★★★★★</div><p>Very good discipline.</p></div>
 </div>
 </section>
 
-<!-- FULL GALLERY -->
-<section id="gallery" class="hidden">
-<h2 style="text-align:center">School Gallery</h2>
+<section id="gallery">
+<h2 style="text-align:center">Gallery</h2>
 <div class="gallery">
-<img src="https://i.ibb.co/3Q6jLsk/80952f12-ed57-4f2f-907b-862dc4376c4a.jpg">
 <img src="https://i.ibb.co/y7DSJy8/fe7e3329-d47e-471c-aa16-e4c36e41fb15.jpg">
+<img src="https://i.ibb.co/3Q6jLsk/80952f12-ed57-4f2f-907b-862dc4376c4a.jpg">
 <img src="https://i.ibb.co/vCrKsMyM/maxresdefault-1.jpg">
 <img src="https://i.ibb.co/8gD9CCdQ/images-29.jpg">
 </div>
 </section>
 
-<!-- ADMISSIONS -->
-<section id="admissions" class="hidden">
+<section id="admissions">
 <h2 style="text-align:center">Admissions</h2>
 <div class="form">
-<input type="text" placeholder="Student Name">
-<input type="text" placeholder="Parent Contact">
-<input type="text" placeholder="Class Applying">
+<input placeholder="Student Name">
+<input placeholder="Parent Contact">
+<input placeholder="Class">
 <button onclick="window.location.href='https://wa.me/2567046122'">Apply via WhatsApp</button>
 </div>
 </section>
 
-<section id="contact" class="hidden">
-<h2 style="text-align:center">Contact</h2>
-<p style="text-align:center">📍 Munyonyo, Kampala, Uganda</p>
-<p style="text-align:center">📞 0782 317067</p>
-<p style="text-align:center">📧 info@taljunior.ac.ug</p>
-<p style="text-align:center">TikTok: <a href="https://www.tiktok.com/@talschool" target="_blank">@talschool</a></p>
+<!-- CONTACT -->
+<section id="contact">
+<h2 style="text-align:center">Contact Us</h2>
+<div class="split">
+<div class="text">
+<p>📍 Location: Munyonyo, Kampala, Uganda</p>
+<p>📞 Phone: 0782 317067 / +256 704 6122</p>
+<p>📧 Email: info@taljunior.ac.ug</p>
+<p>📱 WhatsApp: Click the button below to chat instantly with the school.</p>
+<button onclick="window.location.href='https://wa.me/2567046122'" style="margin-top:10px;padding:10px 20px;background:#25D366;border:none;border-radius:8px;color:#fff;cursor:pointer">Chat on WhatsApp</button>
+</div>
+<div class="text">
+<p>We welcome parents and visitors to reach out anytime. Whether you have questions about admissions, academics, or school life, our team is ready to help. Visit us, call us, or message us directly. We are committed to giving you the best support and information. Your child’s future starts with the right school.</p>
+</div>
+</div>
 </section>
 
 <footer>
-<p>© 2026 TAL Islamic Junior School</p>
+<p>© TAL School</p>
 </footer>
 
 <a class="whatsapp" href="https://wa.me/2567046122">
@@ -161,14 +184,26 @@ footer{background:#000;padding:20px;text-align:center}
 </a>
 
 <script>
-const observer=new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){entry.target.classList.add('show')}
-})
-})
-document.querySelectorAll('.hidden').forEach(el=>observer.observe(el))
+function toggleMenu(){
+const menu = document.getElementById('menu');
+menu.classList.toggle('show');
+}
 
-function toggleMenu(){document.querySelector('.nav-links').classList.toggle('show')}
+// Close menu when clicking a link (better UX on mobile)
+document.querySelectorAll('#menu a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.getElementById('menu').classList.remove('show');
+  });
+});
+
+// Close menu when clicking outside
+window.addEventListener('click', function(e){
+  const menu = document.getElementById('menu');
+  const toggle = document.querySelector('.menu-toggle');
+  if(!menu.contains(e.target) && !toggle.contains(e.target)){
+    menu.classList.remove('show');
+  }
+});
 </script>
 
 </body>
